@@ -1,9 +1,7 @@
 <?php
 
-namespace ilateral\SilverStripe\Carousel\Extensions;
+namespace DFT\SilverStripe\Carousel\Extensions;
 
-use SilverStripe\Dev\Debug;
-use SilverStripe\Assets\Image;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\FieldGroup;
 use SilverStripe\ORM\DataExtension;
@@ -12,11 +10,9 @@ use SilverStripe\Forms\LiteralField;
 use SilverStripe\Forms\NumericField;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\DropdownField;
-use SilverStripe\Core\Injector\Injector;
 use SilverStripe\Forms\GridField\GridField;
 use Heyday\ResponsiveImages\ResponsiveImageExtension;
-use ilateral\SilverStripe\Carousel\Model\CarouselSlide;
-use SilverStripe\Forms\GridField\GridFieldAddNewButton;
+use DFT\SilverStripe\Carousel\Model\CarouselSlide;
 use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 
@@ -28,13 +24,6 @@ use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
  */
 class CarouselPage extends DataExtension
 {
-    
-    /**
-     * DB Columns
-     * 
-     * @var array
-     * @config
-     */
     private static $db = [
         'ShowCarousel'  => 'Boolean',
         "CarouselShowIndicators" => "Boolean",
@@ -43,22 +32,10 @@ class CarouselPage extends DataExtension
         "CarouselInterval" => "Int"
     ];
 
-    /**
-     * Has Many relations
-     * 
-     * @var array
-     * @config
-     */
     private static $has_many = [
         'Slides' => CarouselSlide::class
     ];
 
-    /**
-     * Default variables
-     * 
-     * @var array
-     * @config
-     */
     private static $defaults = [
         'CarouselProfile' => 'ShortCarousel',
         'CarouselInterval' => 3000,
@@ -141,7 +118,7 @@ class CarouselPage extends DataExtension
         return $this
             ->owner
             ->renderWith(
-                'ilateral\SilverStripe\Carousel\Includes\CarouselSlides',
+                'DFT\SilverStripe\Carousel\Includes\CarouselSlides',
                 [
                     'Slides' => $this->owner->Slides(),
                     'Interval' => $this->owner->CarouselInterval ? $this->owner->CarouselInterval : 3000,

@@ -1,3 +1,5 @@
 mappings:
-  CarouselSlide: ilateral\SilverStripe\Carousel\Model\CarouselSlide
-  CarouselPage: ilateral\SilverStripe\Carousel\Extensions\CarouselPage
+  CarouselSlide: DFT\SilverStripe\Carousel\Model\CarouselSlide
+  CarouselPage: DFT\SilverStripe\Carousel\Extensions\CarouselPage
+  ilateral\SilverStripe\Carousel\Model\CarouselSlide: DFT\SilverStripe\Carousel\Model\CarouselSlide
+  ilateral\SilverStripe\Carousel\Extensions\CarouselPage: DFT\SilverStripe\Carousel\Extensions\CarouselPage

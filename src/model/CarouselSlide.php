@@ -1,6 +1,6 @@
 <?php
 
-namespace ilateral\SilverStripe\Carousel\Model;
+namespace DFT\SilverStripe\Carousel\Model;
 
 use SilverStripe\Assets\Image;
 use gorriecoe\Link\Models\Link;
@@ -12,82 +12,44 @@ use SilverStripe\CMS\Model\SiteTree;
  * Representation of a slide object that can be extended to add extra
  * data (such as links, additional content, etc)
  * 
- * @author i-lateral (http://www.i-lateral.com)
- * @package carousel
  */
 class CarouselSlide extends DataObject
 {
 
     private static $table_name = 'CarouselSlide';
 
-    /**
-     * DB Columns
-     * 
-     * @var array
-     * @config
-     */
     private static $db = [
         'Title'     => 'Varchar(99)',
         'Sort'      => 'Int'
     ];
 
-    /**
-     * Has One relations
-     * 
-     * @var array
-     * @config
-     */
     private static $has_one = [
         'Parent'    => SiteTree::class,
         'Image'     => Image::class,
         'Link'		=> Link::class
     ];
 
-    /**
-     * Ownership of relations
-     *
-     * @var array
-     */
     private static $owns = [
         'Image',
         'Link'
     ];
 
-    /**
-     * Default casting for functions to templates
-     * 
-     * @var array
-     * @config
-     */
     private static $casting = array(
         'Thumbnail' => 'Varchar'
     );
 
-    /**
-     * Summary columns/fields for this object
-     * 
-     * @var array
-     * @config
-     */
     private static $summary_fields = array(
         'Thumbnail' => 'Image',
         'Title'     => 'Title',
         'Link.Title'=> 'Link'
     );
 
-    /**
-     * Default sorting of this object
-     * 
-     * @var string
-     * @config
-     */
     private static $default_sort = "Sort ASC";
 
     /**
      * Default image profile to use
      *
      * @var string
-     * @config
      */
     private static $default_proile = 'ShortCarousel';
     
