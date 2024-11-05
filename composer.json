@@ -1,8 +1,8 @@
 {
-  "name": "i-lateral/silverstripe-carousel",
+  "name": "dft/silverstripe-carousel",
 	"description": "A base framework for creating sliders/carousels on your SilverStripe site",
 	"type": "silverstripe-vendormodule",
-	"homepage": "http://github.com/i-lateral/silverstripe-carousel",
+	"homepage": "http://github.com/Dean-Forest-Tech/silverstripe-carousel",
 	"keywords": [
 		"silverstripe",
 		"carousel",
@@ -11,16 +11,12 @@
 	"license": "BSD-3-Clause",
 	"authors": [
 		{
-			"name": "Morven Lewis-Everley",
-			"email": "morven@ilateral.co.uk"
-		},
-		{
-			"name": "Mark Anderson",
-			"email": "mark@ilateral.co.uk"
+			"name": "Dean Forest Tech",
+			"email": "info@dean-forest-tech.uk"
 		}
 	],
 	"support": {
-		"issues": "http://github.com/i-lateral/silverstripe-carousel/issues"
+		"issues": "http://github.com/Dean-Forest-Tech/silverstripe-carousel/issues"
 	},
     "extra": {
         "expose": [
@@ -28,16 +24,15 @@
         ]
     },
 	"require": {
-		"silverstripe/cms": "~4.0",
-        "symbiote/silverstripe-gridfieldextensions": "~3.1",
-		"jonom/focuspoint": "~3.0",
-		"heyday/silverstripe-responsive-images": "^2.0",
-		"dynamic/silverstripe-link-migrator": "1.0.0-beta1",
-		"gorriecoe/silverstripe-linkfield": "^1.0"
+		"silverstripe/cms": "^4 || ^5",
+        "symbiote/silverstripe-gridfieldextensions": "^3",
+		"jonom/focuspoint": "^4 || ^5",
+		"heyday/silverstripe-responsive-images": "^3",
+		"gorriecoe/silverstripe-linkfield": "^1"
 	},
     "autoload": {
         "psr-4": {
-            "ilateral\\SilverStripe\\Carousel\\": "src/"
+            "DFT\\SilverStripe\\Carousel\\": "src/"
         }
     }
 }
