@@ -27,7 +27,7 @@
 		"silverstripe/cms": "^5",
         "symbiote/silverstripe-gridfieldextensions": "^4",
 		"jonom/focuspoint": "^5",
-		"heyday/silverstripe-responsive-images": "^5",
+		"heyday/silverstripe-responsive-images": "^3",
 		"silverstripe/linkfield": "^4"
 	},
     "autoload": {
