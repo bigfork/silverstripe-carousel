@@ -24,11 +24,11 @@
         ]
     },
 	"require": {
-		"silverstripe/cms": "^4 || ^5",
-        "symbiote/silverstripe-gridfieldextensions": "^3",
-		"jonom/focuspoint": "^4 || ^5",
-		"heyday/silverstripe-responsive-images": "^3",
-		"gorriecoe/silverstripe-linkfield": "^1"
+		"silverstripe/cms": "^5",
+        "symbiote/silverstripe-gridfieldextensions": "^4",
+		"jonom/focuspoint": "^5",
+		"heyday/silverstripe-responsive-images": "^5",
+		"silverstripe/linkfield": "^4"
 	},
     "autoload": {
         "psr-4": {

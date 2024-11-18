@@ -7,14 +7,14 @@
 
 <% if $Slides.exists %>
     <div id="CarouselSlider" class="carousel slide" data-interval="{$Interval}" data-ride="carousel">
-        
+
         <% if $ShowIndicators = 1 %>
             <ol class="carousel-indicators">
                 <% loop $Slides %>
                     <li
                         data-target="#CarouselSlider"
                         data-slide-to="$Pos(0)"
-                        <% if $First %>class="active"<% end_if %>
+                        <% if $IsFirst %>class="active"<% end_if %>
                     ></li>
                 <% end_loop %>
             </ol>

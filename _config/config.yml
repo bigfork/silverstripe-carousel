@@ -7,6 +7,8 @@ SilverStripe\CMS\Model\SiteTree:
 SilverStripe\Admin\LeftAndMain:
   extra_requirements_javascript:
     - 'i-lateral/silverstripe-carousel: client/dist/scripts/carouseladmin.js'
+SilverStripe\LinkField\Tasks\GorriecoeMigrationTask:
+  is_enabled: true
 ---
 After: 'silverstripe-responsive-images/*'
 ---

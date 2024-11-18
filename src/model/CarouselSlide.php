@@ -3,15 +3,15 @@
 namespace DFT\SilverStripe\Carousel\Model;
 
 use SilverStripe\Assets\Image;
-use gorriecoe\Link\Models\Link;
 use SilverStripe\ORM\DataObject;
-use gorriecoe\LinkField\LinkField;
 use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\LinkField\Models\Link;
+use SilverStripe\LinkField\Form\LinkField;
 
 /**
  * Representation of a slide object that can be extended to add extra
  * data (such as links, additional content, etc)
- * 
+ *
  */
 class CarouselSlide extends DataObject
 {
@@ -52,7 +52,7 @@ class CarouselSlide extends DataObject
      * @var string
      */
     private static $default_proile = 'ShortCarousel';
-    
+
     /**
      * Get fully rendered image for template
      *
@@ -60,7 +60,7 @@ class CarouselSlide extends DataObject
      */
     public function getRenderedImage()
     {
-        $parent = $this->Parent(); 
+        $parent = $this->Parent();
         $profile = $parent->CarouselProfile;
         if ($profile) {
             return $this->Image->{$profile}();
@@ -82,7 +82,7 @@ class CarouselSlide extends DataObject
         ]);
 
 		$fields->addFieldToTab(
-			'Root.Main', 
+			'Root.Main',
 			LinkField::create(
                 'Link',
                 $this->fieldLabel('Link'),
@@ -101,7 +101,7 @@ class CarouselSlide extends DataObject
             return '(No Image)';
         }
     }
-    
+
     /**
      * Check parent permissions
      *
