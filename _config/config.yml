@@ -3,10 +3,10 @@ Name: carouselconfig
 ---
 SilverStripe\CMS\Model\SiteTree:
   extensions:
-    - ilateral\SilverStripe\Carousel\Extensions\CarouselPage
+    - dft\SilverStripe\Carousel\Extensions\CarouselPage
 SilverStripe\Admin\LeftAndMain:
   extra_requirements_javascript:
-    - 'i-lateral/silverstripe-carousel: client/dist/scripts/carouseladmin.js'
+    - 'dft/silverstripe-carousel: client/dist/scripts/carouseladmin.js'
 SilverStripe\LinkField\Tasks\GorriecoeMigrationTask:
   is_enabled: true
 ---
